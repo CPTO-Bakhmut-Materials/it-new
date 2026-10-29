@@ -1,0 +1,111 @@
+/* Fonts: Fixel (MacPaw, designed in Ukraine, OFL) for reading,
+   JetBrains Mono (OFL) for code. Files live in src/assets/fonts. */
+@font-face { font-family: "Fixel Text"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("../assets/fonts/FixelText-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Fixel Text"; font-weight: 400; font-style: italic; font-display: swap;
+  src: url("../assets/fonts/FixelText-RegularItalic.woff2") format("woff2"); }
+@font-face { font-family: "Fixel Text"; font-weight: 500; font-style: normal; font-display: swap;
+  src: url("../assets/fonts/FixelText-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Fixel Text"; font-weight: 600; font-style: normal; font-display: swap;
+  src: url("../assets/fonts/FixelText-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "Fixel Text"; font-weight: 700; font-style: normal; font-display: swap;
+  src: url("../assets/fonts/FixelText-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Fixel Text"; font-weight: 700; font-style: italic; font-display: swap;
+  src: url("../assets/fonts/FixelText-BoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Fixel Display"; font-weight: 600; font-style: normal; font-display: swap;
+  src: url("../assets/fonts/FixelDisplay-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "Fixel Display"; font-weight: 700; font-style: normal; font-display: swap;
+  src: url("../assets/fonts/FixelDisplay-Bold.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("../assets/fonts/JetBrainsMono-Regular.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 700; font-style: normal; font-display: swap;
+  src: url("../assets/fonts/JetBrainsMono-Bold.woff2") format("woff2"); }
+
+:root {
+  --mono-font: "JetBrains Mono", "DejaVu Sans Mono", Consolas, monospace;
+  --code-font-size: 0.9em;
+}
+html {
+  font-family: "Fixel Text", "Noto Sans", "Segoe UI", Roboto, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+/* Reading size and rhythm: ~17px text, airy lines, ~70 characters per line */
+body { font-size: 1.7rem; }
+.content p, .content ol, .content ul, .content td { line-height: 1.6; }
+.content li + li { margin-top: 0.25em; }
+.content p, .content li {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  font-family: "Fixel Display", "Fixel Text", sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+}
+.content h3, .content h4 { font-weight: 600; }
+.content strong, .content b { font-weight: 600; }
+.sidebar { font-size: 1.5rem; }
+
+/* Lesson layout helpers */
+.how-to {
+  border-left: 5px solid #e62828;
+  background: rgba(230, 40, 40, 0.07);
+  padding: 0.6em 1em;
+  margin: 1em 0 1.5em;
+  border-radius: 4px;
+}
+.how-to ol { margin: 0.3em 0; }
+.clip {
+  margin: 0.6em 0 1.8em;
+}
+.clip img, .clip video {
+  max-width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  border-radius: 4px;
+}
+details {
+  border: 1px solid rgba(128, 128, 128, 0.35);
+  border-radius: 4px;
+  padding: 0.4em 0.9em;
+  margin: 0.6em 0;
+}
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+details[open] summary { margin-bottom: 0.5em; }
+.optional {
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 0.1em 0.6em;
+  border-radius: 1em;
+  background: #777;
+  color: #fff;
+  vertical-align: middle;
+}
+.test-box {
+  border: 2px solid #2a6fdb;
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  margin: 1em 0;
+}
+.more-link {
+  border: 2px dashed rgba(128, 128, 128, 0.5);
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  margin: 1.5em 0;
+}
+.more-link ul { margin: 0.3em 0; }
+.pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  margin: 1em 0;
+}
+.content .pair img { max-width: calc(50% - 8px); height: auto; }
+.content img { max-width: 100%; }
+/* Code must show exactly what students type: no ligatures (>= stays two characters) */
+code, pre, .hljs { font-variant-ligatures: none; font-feature-settings: "liga" 0, "calt" 0; }

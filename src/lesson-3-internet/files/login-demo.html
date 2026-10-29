@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Навчальна сторінка реєстрації</title>
+<style>
+  body { font-family: "Noto Sans", "DejaVu Sans", sans-serif; background: #eef3f8; margin: 0; }
+  .box { max-width: 420px; margin: 60px auto; background: #fff; padding: 32px 36px; border-radius: 12px;
+         box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  p.note { color: #666; margin: 0 0 22px; font-size: 14px; }
+  label { display: block; margin: 14px 0 6px; font-weight: 600; }
+  input { width: 100%; box-sizing: border-box; font-size: 17px; padding: 10px 12px; border: 1px solid #aab; border-radius: 6px; }
+  button { margin-top: 22px; width: 100%; font-size: 17px; padding: 12px; border: 0; border-radius: 6px;
+           background: #2a78d6; color: #fff; font-weight: 600; cursor: pointer; }
+  .ok { display: none; margin-top: 18px; color: #1a7a3a; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>Реєстрація</h1>
+  <p class="note">Навчальна сторінка для уроку. Дані нікуди не надсилаються.</p>
+  <form id="f" action="done.html" method="post">
+    <label for="u">Ім’я користувача</label>
+    <input id="u" name="username" autocomplete="username">
+    <label for="p">Пароль</label>
+    <input id="p" name="password" type="password" autocomplete="new-password">
+    <button type="submit">Зареєструватися</button>
+  </form>
+</div>
+</body>
+</html>

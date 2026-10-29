@@ -1,0 +1,19 @@
+# Built site (GitHub Actions builds it)
+book/
+
+# Recording workspace: raw videos (unblurred paths), program profiles
+# (cookies, saved logins), locally built locale, downloaded extras
+recording/raw/
+recording/profiles/
+recording/locale/
+recording/extras/
+__pycache__/
+
+# Test answers must not be public: questions with correct answers,
+# generated Form scripts and answer keys stay local
+tests/*.json
+tests/*.gs
+tests/*-key.md
+
+# Local notes (student feedback analysis), not published
+ANALYSIS.md

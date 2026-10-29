@@ -1,0 +1,10 @@
+[book]
+title = "Інформаційні технології: 4 уроки"
+authors = []
+language = "uk"
+src = "src"
+
+[output.html]
+additional-css = ["theme/lessons.css"]
+default-theme = "light"
+preferred-dark-theme = "navy"
